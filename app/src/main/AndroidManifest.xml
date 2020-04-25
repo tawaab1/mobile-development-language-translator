@@ -13,13 +13,13 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivity"/>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".PlayScreenActivity"
             android:label="@string/title_activity_playscreen"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+              <activity android:name=".MainActivity"/>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
