@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
+import kotlinx.android.synthetic.main.activity_playscreen.toolbar as toolbar1
 
 class PlayScreenActivity : AppCompatActivity() {
 
