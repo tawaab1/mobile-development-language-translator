@@ -17,7 +17,6 @@ class BottomNavigationActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bottom_navigation)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//        val bnv = findViewById<BottomNavigationView>(R.id.bnv)
         bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
         bnv.menu.getItem(1).isChecked = true
     }

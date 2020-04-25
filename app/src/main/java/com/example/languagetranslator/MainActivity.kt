@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.action_settings -> {
-                Toast.makeText(this@MainActivity, "Settings", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
