@@ -9,6 +9,8 @@ import android.widget.Toast
 import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+import android.os.Handler
+
 
 class MainActivity : AppCompatActivity() {
 
