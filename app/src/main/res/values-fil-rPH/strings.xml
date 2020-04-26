@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Language Translator</string>
+    <string name="speak">Magsalita</string>
+    <string name="translate">Isalin sa ibang wika</string>
 </resources>
