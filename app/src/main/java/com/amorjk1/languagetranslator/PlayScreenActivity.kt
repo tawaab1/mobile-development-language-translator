@@ -1,16 +1,14 @@
-package com.example.languagetranslator
+package com.amorjk1.languagetranslator
 
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
 import java.util.*
-import kotlinx.android.synthetic.main.activity_playscreen.toolbar as toolbar1
 
 class PlayScreenActivity : AppCompatActivity() {
 

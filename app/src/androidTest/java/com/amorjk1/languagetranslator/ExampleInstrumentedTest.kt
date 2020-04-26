@@ -1,4 +1,4 @@
-package com.example.languagetranslator
+package com.amorjk1.languagetranslator
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

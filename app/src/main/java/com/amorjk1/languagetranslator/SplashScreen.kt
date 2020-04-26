@@ -1,7 +1,6 @@
-package com.example.languagetranslator
+package com.amorjk1.languagetranslator
 
 import android.content.Intent
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity

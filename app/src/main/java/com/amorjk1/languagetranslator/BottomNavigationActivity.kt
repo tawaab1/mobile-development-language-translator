@@ -1,12 +1,10 @@
-package com.example.languagetranslator
+package com.amorjk1.languagetranslator
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.whenCreated
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 

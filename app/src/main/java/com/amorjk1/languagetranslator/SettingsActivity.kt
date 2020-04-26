@@ -1,9 +1,7 @@
-package com.example.languagetranslator
+package com.amorjk1.languagetranslator
 
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.View
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
