@@ -49,13 +49,22 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-
+    /**
+     * onOptionsItemSelected() is used to navigate to different screens using the drawable items
+     * action_search and action_setting
+     */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            /**
+             * navigates to the BottomNavigationActivity
+             */
             R.id.action_search -> {
                 startActivity(Intent(this@MainActivity, BottomNavigationActivity::class.java))
                 true
             }
+            /**
+             * navigates to the SettingsActivity
+             */
             R.id.action_settings -> {
                 startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
                 true
