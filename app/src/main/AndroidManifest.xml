@@ -19,7 +19,8 @@
             android:label="@string/title_activity_playscreen"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-              <activity android:name="com.amorjk1.languagetranslator.MainActivity"/>
+        <activity android:name="com.amorjk1.languagetranslator.MainActivity"
+            android:theme="@style/SplashScreenTheme"/>
         <activity android:name="com.amorjk1.languagetranslator.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
