@@ -43,7 +43,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
-            .setMessage("Are You Sure You want To go back")
+            .setMessage("Are You Sure You want To Go Back")
             .setCancelable(false)
             .setPositiveButton("Yes", { dialog, id-> super@PlayScreenActivity.onBackPressed() })
             .setNegativeButton("No", null)

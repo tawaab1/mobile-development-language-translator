@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
-            .setMessage("Are You Sure You want To exit")
+            .setMessage("Are You Sure You want To Exit")
             .setCancelable(false)
             .setPositiveButton("Yes", { dialog, id-> super@MainActivity.onBackPressed() })
             .setNegativeButton("No", null)
