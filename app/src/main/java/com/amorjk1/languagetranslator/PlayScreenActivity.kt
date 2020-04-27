@@ -5,7 +5,6 @@ import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
 import java.util.*
