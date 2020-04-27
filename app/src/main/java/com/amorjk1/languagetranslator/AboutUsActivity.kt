@@ -2,7 +2,11 @@ package com.amorjk1.languagetranslator
 
 import android.content.Intent
 import android.os.Bundle
+
+import androidx.appcompat.app.AlertDialog
+
 import android.view.MenuItem
+
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -19,8 +23,10 @@ class AboutUsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about_us)
         setSupportActionBar(toolbar)
 
+
         bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
         bnv.menu.getItem(1).isChecked = true
+
 
 
     }
