@@ -35,13 +35,5 @@ class SettingsActivity : AppCompatActivity() {
 
     }
 
-//    override fun onBackPressed() {
-//        AlertDialog.Builder(this)
-//            .setMessage("Are You Sure You want To go back")
-//            .setCancelable(false)
-//            .setPositiveButton("Yes", { dialog, id-> super@SettingsActivity.onBackPressed() })
-//            .setNegativeButton("No", null)
-//            .show()
-//    }
     }
 

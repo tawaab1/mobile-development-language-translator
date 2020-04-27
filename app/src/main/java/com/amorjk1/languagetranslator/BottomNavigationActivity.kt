@@ -53,16 +53,4 @@ class BottomNavigationActivity : AppCompatActivity() {
         }
 
     }
-
-//    override fun onBackPressed() {
-//        AlertDialog.Builder(this)
-//            .setMessage("Are You Sure You want To exit")
-//            .setCancelable(false)
-//            .setPositiveButton("Yes", { dialog, id-> super@BottomNavigationActivity.onBackPressed() })
-//            .setNegativeButton("No", null)
-//            .show()
-//    }
-
-
-
 }
