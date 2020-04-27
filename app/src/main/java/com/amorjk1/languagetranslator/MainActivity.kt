@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+<<<<<<< HEAD
 import com.google.android.material.bottomnavigation.BottomNavigationView
+=======
+>>>>>>> e9e586a3c22226727d6fad0f63112af22996eaf2
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.activity_main.*
 

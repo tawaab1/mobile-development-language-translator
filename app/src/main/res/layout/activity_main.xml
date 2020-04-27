@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,6 +10,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+    </com.google.android.material.appbar.AppBarLayout>
+
+>>>>>>> e9e586a3c22226727d6fad0f63112af22996eaf2
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"

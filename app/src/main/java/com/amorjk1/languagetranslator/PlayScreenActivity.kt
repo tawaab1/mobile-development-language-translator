@@ -7,8 +7,11 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+=======
+>>>>>>> e9e586a3c22226727d6fad0f63112af22996eaf2
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
 import java.util.*
