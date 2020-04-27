@@ -10,11 +10,8 @@
 
 
 
-<<<<<<< HEAD
-=======
-    </com.google.android.material.appbar.AppBarLayout>
 
->>>>>>> e9e586a3c22226727d6fad0f63112af22996eaf2
+    </com.google.android.material.appbar.AppBarLayout>
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
