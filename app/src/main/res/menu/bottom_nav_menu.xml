@@ -4,14 +4,14 @@
 
     <item android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="Home" />
+        android:title="" />
     <item android:id="@+id/navigation_playquiz"
         android:icon="@drawable/ic_videogame_asset_black_24dp"
-        android:title="Quiz" />
+        android:title="" />
     <item android:id="@+id/navigation_aboutus"
         android:icon="@drawable/ic_people_black_24dp"
-        android:title="About Us" />
+        android:title="" />
     <item android:id="@+id/navigation_contactus"
         android:icon="@drawable/ic_live_help_black_24dp"
-        android:title="Contact Us" />
+        android:title="" />
 </menu>

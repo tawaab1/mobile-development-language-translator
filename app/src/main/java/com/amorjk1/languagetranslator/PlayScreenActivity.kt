@@ -8,10 +8,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
+
 import kotlinx.android.synthetic.main.activity_playscreen.*
 import java.util.*
-import kotlinx.android.synthetic.main.activity_bottom_navigation.toolbar as toolbar1
+
 
 class PlayScreenActivity : AppCompatActivity() {
 
@@ -19,12 +19,12 @@ class PlayScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playscreen)
-        setSupportActionBar(toolbar1)
+        setSupportActionBar(toolbar)
         /**
          * calling the class OnNavigationItemSelectedListener() to the onCreate() method
          */
-        bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
-        bnv.menu.getItem(1).isChecked = true
+        bnv2.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
+        bnv2.menu.getItem(1).isChecked = true
 
         mTTs = TextToSpeech(applicationContext, TextToSpeech.OnInitListener { status ->
             if (status != TextToSpeech.ERROR){
@@ -71,6 +71,14 @@ class PlayScreenActivity : AppCompatActivity() {
                  */
                 R.id.navigation_playquiz->{
                     startActivity(Intent(this@PlayScreenActivity, PlayScreenActivity::class.java))
+                    finish()
+                    true
+                }
+                /**
+                 * navigates to the Contact Us activity
+                 */
+                R.id.navigation_contactus->{
+                    startActivity(Intent(this@PlayScreenActivity, ContactUsActivity::class.java))
                     finish()
                     true
                 }
