@@ -2,36 +2,32 @@ package com.amorjk1.languagetranslator
 
 import android.content.Intent
 import android.os.Bundle
-
-import androidx.appcompat.app.AlertDialog
-
 import android.view.MenuItem
-
-import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_about_us.*
 
+import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 
-class AboutUsActivity : AppCompatActivity() {
+class BottomNavigationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about_us)
+        setContentView(R.layout.activity_bottom_navigation)
+        /**
+         * enables toolbar capabilities
+         */
         setSupportActionBar(toolbar)
-
-<<<<<<< HEAD
-        bnv3.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
-        bnv3.menu.getItem(1).isChecked = true
-=======
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        /**
+         * calling the class OnNavigationItemSelectedListener() to the onCreate() method
+         */
         bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
         bnv.menu.getItem(1).isChecked = true
->>>>>>> f89bc13f8cc4aecf9584e6ec3433be6b1769b3c3
-
-
-
     }
+    /**
+     * OnNavigationItemSelectedListener() used to switch between the activities
+     */
     inner class OnNavigationItemSelectedListener : BottomNavigationView.OnNavigationItemSelectedListener{
         override fun onNavigationItemSelected(item: MenuItem): Boolean {
             return when (item.itemId){
@@ -39,7 +35,7 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the MainActivity
                  */
                 R.id.navigation_home -> {
-                    startActivity(Intent(this@AboutUsActivity, MainActivity::class.java))
+                    startActivity(Intent(this@BottomNavigationActivity, MainActivity::class.java))
                     finish()
                     true
                 }
@@ -47,20 +43,7 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_aboutus ->{
-                    startActivity(Intent(this@AboutUsActivity, AboutUsActivity::class.java))
-                    finish()
-                    true
-                }
-                /**
-                 * navigates to the About Us activity
-                 */
-                R.id.navigation_playquiz->{
-                    startActivity(Intent(this@AboutUsActivity, PlayScreenActivity::class.java))
-                    finish()
-                    true
-                }
-                R.id.navigation_contactus->{
-                    startActivity(Intent(this@AboutUsActivity, ContactUsActivity::class.java))
+                    startActivity(Intent(this@BottomNavigationActivity, AboutUsActivity::class.java))
                     finish()
                     true
                 }

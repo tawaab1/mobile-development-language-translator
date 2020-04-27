@@ -1,7 +1,9 @@
 package com.amorjk1.languagetranslator
 
+import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
@@ -33,4 +35,5 @@ class SettingsActivity : AppCompatActivity() {
 
     }
 
-}
+    }
+

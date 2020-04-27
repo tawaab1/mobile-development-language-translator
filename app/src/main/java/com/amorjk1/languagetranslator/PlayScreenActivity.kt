@@ -6,6 +6,7 @@ import android.speech.tts.TextToSpeech
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -87,6 +88,15 @@ class PlayScreenActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Are You Sure You want To Go Back")
+            .setCancelable(false)
+            .setPositiveButton("Yes", { dialog, id-> super@PlayScreenActivity.onBackPressed() })
+            .setNegativeButton("No", null)
+            .show()
     }
 
 }
