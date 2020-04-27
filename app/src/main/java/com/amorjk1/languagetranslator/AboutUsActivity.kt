@@ -20,14 +20,9 @@ class AboutUsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about_us)
         setSupportActionBar(toolbar)
 
-<<<<<<< HEAD
+
         bnv3.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
         bnv3.menu.getItem(1).isChecked = true
-=======
-
-        bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
-        bnv.menu.getItem(1).isChecked = true
->>>>>>> f89bc13f8cc4aecf9584e6ec3433be6b1769b3c3
 
 
 

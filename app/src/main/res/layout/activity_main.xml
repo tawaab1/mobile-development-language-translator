@@ -22,11 +22,10 @@
         android:background="@color/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
-<<<<<<< HEAD
+
     </com.google.android.material.appbar.AppBarLayout>
 
-=======
->>>>>>> f89bc13f8cc4aecf9584e6ec3433be6b1769b3c3
+
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
