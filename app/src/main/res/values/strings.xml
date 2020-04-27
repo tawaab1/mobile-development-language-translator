@@ -1,15 +1,25 @@
 <resources>
     <string name="app_name">Language Translator</string>
     <string name="title_activity_bottom_navigation"> Search </string>
-    <string name="action_search">Search</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings" translatable="false">Settings</string>
+    <string name="title_activity_contact_us">Contact Us</string>
     <string name="title_activity_playscreen">Quiz</string>
+    <string name="title_activity_about_us">About Us</string>
     <string name="about_us_text"> This Quiz application is an educational language application that helps individuals to learn the vocabulary of other nationalities. It was developed by
     Aisea Tawake, Jommel Amor and Roynuka Nuka</string>
+    <string name="contact_us_text">If you run into any issues please feel free to contact us: </string>
+    <string name="contact_us_jommel">Jommel Amor: amorjk1@student.op.ac.nz</string>
+    <string name="contact_us_roy">Roynuka Nuka: nukar1@student.op.ac.nz</string>
+    <string name="contact_us_aisea">Aisea Tawake: tawaab1@student.op.ac.nz</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="speak">Speak</string>
     <string name="translate">Translate</string>
-    <string name="title_activity_about_us">AboutUsActivity</string>
+
+    <!-- Strings used for fragments for navigation -->
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

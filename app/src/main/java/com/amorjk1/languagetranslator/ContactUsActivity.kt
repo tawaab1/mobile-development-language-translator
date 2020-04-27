@@ -8,16 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_about_us.*
 
+import kotlinx.android.synthetic.main.activity_contact_us.*
+import kotlinx.android.synthetic.main.activity_contact_us.toolbar
 
-class AboutUsActivity : AppCompatActivity() {
+class ContactUsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about_us)
+        setContentView(R.layout.activity_contact_us)
         setSupportActionBar(toolbar)
 
-        bnv3.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
-        bnv3.menu.getItem(1).isChecked = true
+        bnv4.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
+        bnv4.menu.getItem(1).isChecked = true
 
 
     }
@@ -28,7 +30,7 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the MainActivity
                  */
                 R.id.navigation_home -> {
-                    startActivity(Intent(this@AboutUsActivity, MainActivity::class.java))
+                    startActivity(Intent(this@ContactUsActivity, MainActivity::class.java))
                     finish()
                     true
                 }
@@ -36,7 +38,7 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_aboutus ->{
-                    startActivity(Intent(this@AboutUsActivity, AboutUsActivity::class.java))
+                    startActivity(Intent(this@ContactUsActivity, AboutUsActivity::class.java))
                     finish()
                     true
                 }
@@ -44,12 +46,15 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_playquiz->{
-                    startActivity(Intent(this@AboutUsActivity, PlayScreenActivity::class.java))
+                    startActivity(Intent(this@ContactUsActivity, PlayScreenActivity::class.java))
                     finish()
                     true
                 }
+                /**
+                 * navigates to the Contact Us activity
+                 */
                 R.id.navigation_contactus->{
-                    startActivity(Intent(this@AboutUsActivity, ContactUsActivity::class.java))
+                    startActivity(Intent(this@ContactUsActivity, ContactUsActivity::class.java))
                     finish()
                     true
                 }

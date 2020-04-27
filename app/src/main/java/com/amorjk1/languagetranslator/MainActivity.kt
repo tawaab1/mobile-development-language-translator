@@ -7,7 +7,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -16,13 +15,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(toolbar1)
 
         /**
          * calling the class OnNavigationItemSelectedListener() to the onCreate() method
          */
-        bnv.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
-        bnv.menu.getItem(1).isChecked = true
+        bnv1.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
+        bnv1.menu.getItem(1).isChecked = true
         //speak button
         //val speakBtn = findViewById<View>(R.id.buttonSpeak)
         //speakBtn.setOnClickListener(YoutubeButtonOnClickListener())
@@ -77,6 +76,14 @@ class MainActivity : AppCompatActivity() {
                  */
                 R.id.navigation_playquiz->{
                     startActivity(Intent(this@MainActivity, PlayScreenActivity::class.java))
+                    finish()
+                    true
+                }
+                /**
+                 * navigates to the Contact Us activity
+                 */
+                R.id.navigation_contactus->{
+                    startActivity(Intent(this@MainActivity, ContactUsActivity::class.java))
                     finish()
                     true
                 }
