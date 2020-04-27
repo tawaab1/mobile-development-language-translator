@@ -4,11 +4,6 @@
     android:background="@color/mainBackground"
       tools:context=".MainActivity">
 
-    <item android:id="@+id/action_search"
-          android:title="@string/action_search"
-          android:icon="@drawable/ic_search_black_24dp"
-          app:showAsAction="ifRoom"/>
-
     <item
             android:icon="@drawable/ic_more_vert_black_24dp"
             android:title=""
