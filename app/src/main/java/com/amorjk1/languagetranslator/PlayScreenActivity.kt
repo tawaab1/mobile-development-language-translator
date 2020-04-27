@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
@@ -38,6 +39,15 @@ class PlayScreenActivity : AppCompatActivity() {
 
         }
 
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Are You Sure You want To go back")
+            .setCancelable(false)
+            .setPositiveButton("Yes", { dialog, id-> super@PlayScreenActivity.onBackPressed() })
+            .setNegativeButton("No", null)
+            .show()
     }
 
 }

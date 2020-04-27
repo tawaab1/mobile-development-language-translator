@@ -1,11 +1,14 @@
 package com.amorjk1.languagetranslator
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_bottom_navigation.*
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -27,14 +30,14 @@ class MainActivity : AppCompatActivity() {
         //speakBtn.setOnClickListener(YoutubeButtonOnClickListener())
 
         //val editText = findViewById<View>(R.id.editText)
-        
-        
-        
+
+
         
         startButton.setOnClickListener(View.OnClickListener {
             val intent = Intent(this@MainActivity, PlayScreenActivity::class.java)
             startActivity(intent) })
     }
+
     
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
@@ -63,6 +66,15 @@ class MainActivity : AppCompatActivity() {
             }
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Are You Sure You want To exit")
+            .setCancelable(false)
+            .setPositiveButton("Yes", { dialog, id-> super@MainActivity.onBackPressed() })
+            .setNegativeButton("No", null)
+            .show()
     }
     
 }

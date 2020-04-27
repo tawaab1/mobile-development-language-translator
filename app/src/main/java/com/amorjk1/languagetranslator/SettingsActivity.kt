@@ -1,7 +1,9 @@
 package com.amorjk1.languagetranslator
 
+import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 
@@ -33,4 +35,13 @@ class SettingsActivity : AppCompatActivity() {
 
     }
 
-}
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setMessage("Are You Sure You want To go back")
+            .setCancelable(false)
+            .setPositiveButton("Yes", { dialog, id-> super@SettingsActivity.onBackPressed() })
+            .setNegativeButton("No", null)
+            .show()
+    }
+    }
+
