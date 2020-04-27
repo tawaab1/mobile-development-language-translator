@@ -39,9 +39,13 @@ class BottomNavigationActivity : AppCompatActivity() {
                     true
                 }
                 /**
-                 * navigates to a different activity
+                 * navigates to the About Us activity
                  */
-                R.id.navigation_aboutus -> true
+                R.id.navigation_aboutus ->{
+                    startActivity(Intent(this@BottomNavigationActivity, AboutUsActivity::class.java))
+                    finish()
+                    true
+                }
                 else -> onNavigationItemSelected(item)
             }
 
