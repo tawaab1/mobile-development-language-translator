@@ -26,6 +26,7 @@ class PlayScreenActivity : AppCompatActivity() {
 //    private var txtQuestionCount: TextView? = null
 //    private var txtCounter: TextView? = null
     private val questions = Question()
+    private lateinit  var imageView:ImageView
     //mQuestionView = findViewById(R.id.question) as TextView
     private lateinit var scoreView: TextView
     private lateinit var txtQuestion: TextView
@@ -46,6 +47,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
+        imageView = findViewById(R.id.imgView)
         scoreView = findViewById(R.id.txvScore)
         //nScore = findViewById(R.id.txvScore)
         txtQuestion = findViewById(R.id.txvQuestion)
@@ -206,6 +208,7 @@ class PlayScreenActivity : AppCompatActivity() {
     }
 
     private fun updateQuestion() {
+        imageView.setImageResource(questions.images[nQuestionNumber])
         txtQuestion.setText(questions.getQuestion(nQuestionNumber))
         nButtonChoice1.setText(questions.getChoice1(nQuestionNumber))
         nButtonChoice2.setText(questions.getChoice2(nQuestionNumber))

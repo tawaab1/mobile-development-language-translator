@@ -1,13 +1,21 @@
+import com.amorjk1.languagetranslator.R
+
 class Question {
-    private val nQuestions = arrayOf<String>("What is the capital of NZ",
-    "How many People in NZ",
-    "How many planets are there?");
+    private val nQuestions = arrayOf<String>("How do you say you're welcome?",
+    "Dolares means what in english?",
+    "What does the picture show?",
+    "This is a young what?",
+    "How many chairs are there?");
 
-    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Wellington", "Dunedin", "Auckland", "Oamaru"),
-        arrayOf<String>("1", "2", "3", "4"),
-        arrayOf<String>("10", "5", "7", "9"))
+    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Buenos", "Gracias", "De Nada", "Que Pasa"),
+        arrayOf<String>("Dolares", "Money", "Dole", "Dodo"),
+        arrayOf<String>("Ropa", "Verde", "Cama", "Lady"),
+        arrayOf<String>("Senorita", "Mama", "Chico", "Lady"),
+        arrayOf<String>("Uno", "Cinco", "Tres", "Cuatro"))
 
-    private val nAnswers = arrayOf<String>("Wellington","1","10");
+    private val nAnswers = arrayOf<String>("De Nada","Dolares","Cama","Senorita","Cuatro");
+
+    var images = intArrayOf(R.drawable.youre_welcome,R.drawable.dolares,R.drawable.cama,R.drawable.senorita,R.drawable.chairs)
 
     fun getQuestion(a:Int):String {
         val question = nQuestions[a]
