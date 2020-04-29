@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.MenuItem
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +17,7 @@ import kotlinx.android.synthetic.main.content_about_us.*
 import java.lang.reflect.Array.get
 import java.util.*
 import kotlin.collections.ArrayList
+import android.view.View as View1
 
 
 class PlayScreenActivity : AppCompatActivity() {
@@ -27,6 +27,7 @@ class PlayScreenActivity : AppCompatActivity() {
 //    private var txtCounter: TextView? = null
     private val questions = Question()
     //mQuestionView = findViewById(R.id.question) as TextView
+    private lateinit var scoreView: TextView
     private lateinit var txtQuestion: TextView
     private lateinit var nButtonChoice1: Button
     private lateinit var nButtonChoice2: Button
@@ -34,7 +35,7 @@ class PlayScreenActivity : AppCompatActivity() {
     private lateinit var nButtonChoice4: Button
 
     private var nAnswer:String? = ""
-    //private val nScore:Int = 0
+    private var nScore:Int = 0
     private var nQuestionNumber = 0
 
     lateinit var mTTs: TextToSpeech
@@ -45,6 +46,8 @@ class PlayScreenActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
+        scoreView = findViewById(R.id.txvScore)
+        //nScore = findViewById(R.id.txvScore)
         txtQuestion = findViewById(R.id.txvQuestion)
        // txtQuestion = textView.findViewById(R.id.txvQuestion)
         nButtonChoice1 = findViewById(R.id.button1)
@@ -54,10 +57,12 @@ class PlayScreenActivity : AppCompatActivity() {
 
         updateQuestion()
 
-        nButtonChoice1.setOnClickListener(View.OnClickListener {
+        nButtonChoice1.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice1.getText() == nAnswer)
             {
+                nScore += 1;
+                updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -68,10 +73,12 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
-        nButtonChoice2.setOnClickListener(View.OnClickListener {
+        nButtonChoice2.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice2.getText() == nAnswer)
             {
+                nScore += 1;
+                updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -82,10 +89,12 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
-        nButtonChoice3.setOnClickListener(View.OnClickListener {
+        nButtonChoice3.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice3.getText() == nAnswer)
             {
+                nScore += 1;
+                updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -96,10 +105,12 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
-        nButtonChoice4.setOnClickListener(View.OnClickListener {
+        nButtonChoice4.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice4.getText() == nAnswer)
             {
+                nScore += 1;
+                updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -122,7 +133,7 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
-        val speakBtn = findViewById<View>(R.id.buttonSpeak)
+        val speakBtn = findViewById<View1>(R.id.buttonSpeak)
         speakBtn.setOnClickListener{
             val toSpeak = editText.text.toString()
             if (toSpeak == ""){
@@ -195,6 +206,10 @@ class PlayScreenActivity : AppCompatActivity() {
         nAnswer = questions.getCorrectAnswer(nQuestionNumber)
         nQuestionNumber++
 
+    }
+
+    private fun updateScore(point:Int) {
+        scoreView.setText("Score:" + nScore)
     }
 
 }
