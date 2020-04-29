@@ -61,6 +61,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
             if (nButtonChoice1.getText() == nAnswer)
             {
+                //correct answer
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
@@ -68,6 +69,7 @@ class PlayScreenActivity : AppCompatActivity() {
             }
             else
             {
+                //incorrect
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -77,6 +79,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
             if (nButtonChoice2.getText() == nAnswer)
             {
+                //correct answer
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
@@ -84,6 +87,7 @@ class PlayScreenActivity : AppCompatActivity() {
             }
             else
             {
+                //incorrect
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -93,6 +97,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
             if (nButtonChoice3.getText() == nAnswer)
             {
+                //correct answer
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
@@ -100,6 +105,7 @@ class PlayScreenActivity : AppCompatActivity() {
             }
             else
             {
+                //incorrect
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -109,6 +115,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
             if (nButtonChoice4.getText() == nAnswer)
             {
+                //correct answer
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
@@ -116,6 +123,7 @@ class PlayScreenActivity : AppCompatActivity() {
             }
             else
             {
+                //incorrect
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
                 updateQuestion()
             }
@@ -135,15 +143,16 @@ class PlayScreenActivity : AppCompatActivity() {
 
         val speakBtn = findViewById<View1>(R.id.buttonSpeak)
         speakBtn.setOnClickListener{
-            val toSpeak = editText.text.toString()
-            if (toSpeak == ""){
+            //val toSpeak2 = textView.text.toString()
+            //val toSpeak = editText.text.toString()
+            val toSpeak2 = txtQuestion.text.toString()
+            if (toSpeak2 == ""){
                 Toast.makeText(this,"Enter Text",Toast.LENGTH_LONG).show()
             }
             else{
-                Toast.makeText(this,toSpeak,Toast.LENGTH_LONG).show()
-                mTTs.speak(toSpeak, TextToSpeech.QUEUE_FLUSH,null)
+                Toast.makeText(this,toSpeak2,Toast.LENGTH_LONG).show()
+                mTTs.speak(toSpeak2, TextToSpeech.QUEUE_FLUSH,null)
             }
-
         }
 
     }
