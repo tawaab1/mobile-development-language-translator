@@ -1,46 +1,112 @@
 package com.amorjk1.languagetranslator
 
+import Question
 import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.amorjk1.languagetranslator.R.id.txvQuestion
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
+import kotlinx.android.synthetic.main.content_about_us.*
+import java.lang.reflect.Array.get
 import java.util.*
 import kotlin.collections.ArrayList
 
 
 class PlayScreenActivity : AppCompatActivity() {
 
+//    private var txtScore: TextView? = null
+//    private var txtQuestionCount: TextView? = null
+//    private var txtCounter: TextView? = null
+    private val questions = Question()
+    //private lateinit var txtQuestion: TextView
+    private lateinit var nButtonChoice1: Button
+    private lateinit var nButtonChoice2: Button
+    private lateinit var nButtonChoice3: Button
+    private lateinit var nButtonChoice4: Button
+
+    private var nAnswer:String? = ""
+    //private val nScore:Int = 0
+    private var nQuestionNumber = 0
+
     lateinit var mTTs: TextToSpeech
-    lateinit var currentQuestion: Question
-    var questionNumber = 0
-    val maxNumQuestions = 5
-    lateinit var qAnswers:ArrayList<String>
-    lateinit var selectedQuestion:String
-
-    var questionsArray = arrayListOf<Question>(
-        Question(theQuestion = "How many Islands in New Zealand", theAnswer = arrayListOf("1","2","3","4")),
-        Question(theQuestion = "Who is the prime minister of nz", theAnswer = arrayListOf("brown","yellow","black","green")),
-        Question(theQuestion = "Who am i", theAnswer = arrayListOf("John","Sam","Roy","Chris")),
-        Question(theQuestion = "Jesus is?", theAnswer = arrayListOf("King","King2","King3","King6")),
-        Question(theQuestion = "How tall am i?", theAnswer = arrayListOf("tall","taller","tall-ish","tallest"))
-
-    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playscreen)
 
-
-
         setSupportActionBar(toolbar)
+
+        //txtQuestion = textView.findViewById(R.id.txvQuestion)
+        nButtonChoice1 = findViewById(R.id.button1)
+        nButtonChoice2 = findViewById(R.id.button2)
+        nButtonChoice3 = findViewById(R.id.button3)
+        nButtonChoice4 = findViewById(R.id.button4)
+
+        updateQuestion()
+
+        nButtonChoice1.setOnClickListener(View.OnClickListener {
+
+            if (nButtonChoice1.getText() == nAnswer)
+            {
+                Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+            else
+            {
+                Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+        })
+
+        nButtonChoice2.setOnClickListener(View.OnClickListener {
+
+            if (nButtonChoice2.getText() == nAnswer)
+            {
+                Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+            else
+            {
+                Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+        })
+
+        nButtonChoice3.setOnClickListener(View.OnClickListener {
+
+            if (nButtonChoice3.getText() == nAnswer)
+            {
+                Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+            else
+            {
+                Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+        })
+
+        nButtonChoice4.setOnClickListener(View.OnClickListener {
+
+            if (nButtonChoice4.getText() == nAnswer)
+            {
+                Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+            else
+            {
+                Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
+                updateQuestion()
+            }
+        })
         /**
          * calling the class OnNavigationItemSelectedListener() to the onCreate() method
          */
@@ -108,18 +174,6 @@ class PlayScreenActivity : AppCompatActivity() {
         }
     }
 
-    fun setQuestion(){
-        currentQuestion = questionsArray[questionNumber]
-        qAnswers = ArrayList(currentQuestion.theAnswer)
-        qAnswers.shuffle()
-    }
-
-    fun randomQuestion(){
-        questionsArray.shuffle()
-        setQuestion()
-        //Log.d("ANSWER",qAnswers[0],qAnswers[1],qAnswers[2],qAnswers[3])
-    }
-
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setMessage("Are You Sure You want To Go Back")
@@ -127,6 +181,18 @@ class PlayScreenActivity : AppCompatActivity() {
             .setPositiveButton("Yes", { dialog, id-> super@PlayScreenActivity.onBackPressed() })
             .setNegativeButton("No", null)
             .show()
+    }
+
+    private fun updateQuestion() {
+        //txtQuestion.setText(questions.getQuestion(nQuestionNumber))
+        nButtonChoice1.setText(questions.getChoice1(nQuestionNumber))
+        nButtonChoice2.setText(questions.getChoice2(nQuestionNumber))
+        nButtonChoice3.setText(questions.getChoice3(nQuestionNumber))
+        nButtonChoice4.setText(questions.getChoice4(nQuestionNumber))
+
+        nAnswer = questions.getCorrectAnswer(nQuestionNumber)
+        nQuestionNumber++
+
     }
 
 }
