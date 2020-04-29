@@ -26,7 +26,8 @@ class PlayScreenActivity : AppCompatActivity() {
 //    private var txtQuestionCount: TextView? = null
 //    private var txtCounter: TextView? = null
     private val questions = Question()
-    //private lateinit var txtQuestion: TextView
+    //mQuestionView = findViewById(R.id.question) as TextView
+    private lateinit var txtQuestion: TextView
     private lateinit var nButtonChoice1: Button
     private lateinit var nButtonChoice2: Button
     private lateinit var nButtonChoice3: Button
@@ -44,7 +45,8 @@ class PlayScreenActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
 
-        //txtQuestion = textView.findViewById(R.id.txvQuestion)
+        txtQuestion = findViewById(R.id.txvQuestion)
+       // txtQuestion = textView.findViewById(R.id.txvQuestion)
         nButtonChoice1 = findViewById(R.id.button1)
         nButtonChoice2 = findViewById(R.id.button2)
         nButtonChoice3 = findViewById(R.id.button3)
@@ -184,7 +186,7 @@ class PlayScreenActivity : AppCompatActivity() {
     }
 
     private fun updateQuestion() {
-        //txtQuestion.setText(questions.getQuestion(nQuestionNumber))
+        txtQuestion.setText(questions.getQuestion(nQuestionNumber))
         nButtonChoice1.setText(questions.getChoice1(nQuestionNumber))
         nButtonChoice2.setText(questions.getChoice2(nQuestionNumber))
         nButtonChoice3.setText(questions.getChoice3(nQuestionNumber))
