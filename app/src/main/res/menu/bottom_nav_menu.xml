@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home_black_24dp"
         android:title="" />
     <item android:id="@+id/navigation_playquiz"
-        android:icon="@drawable/ic_videogame_asset_black_24dp"
+        android:icon="@drawable/ic_videogame_24dp"
         android:title="" />
     <item android:id="@+id/navigation_aboutus"
         android:icon="@drawable/ic_people_black_24dp"

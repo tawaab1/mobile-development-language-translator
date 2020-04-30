@@ -8,7 +8,7 @@
     android:background="@color/mainBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_contact_us"
-    tools:context=".BottomNavigationActivity">
+    tools:context=".ContactUsActivity">
 
 
     <TextView
@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/transText"
         android:layout_width="320dp"
         android:layout_height="21dp"
         android:layout_marginBottom="100dp"

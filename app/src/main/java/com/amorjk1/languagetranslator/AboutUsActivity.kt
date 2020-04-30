@@ -50,7 +50,7 @@ class AboutUsActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_playquiz->{
-                    startActivity(Intent(this@AboutUsActivity, PlayScreenActivity::class.java))
+                    startActivity(Intent(this@AboutUsActivity, TranslationActivity::class.java))
                     finish()
                     true
                 }

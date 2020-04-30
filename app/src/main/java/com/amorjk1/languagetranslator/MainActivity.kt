@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_playquiz->{
-                    startActivity(Intent(this@MainActivity, PlayScreenActivity::class.java))
+                    startActivity(Intent(this@MainActivity, TranslationActivity::class.java))
                     finish()
                     true
                 }
