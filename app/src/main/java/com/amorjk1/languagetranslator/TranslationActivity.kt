@@ -116,6 +116,9 @@ class TranslationActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * tts speaker changes depending on culture chosen
+     */
     inner class SpeakButtonClickHandler : View.OnClickListener {
         override fun onClick(v: View) {
             val translatedLanguageSelected =

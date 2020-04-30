@@ -18,11 +18,11 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".PlayScreenSpanishActivity"
-            android:label="@string/title_activity_play_screen_german"
+            android:label="@string/title_activity_play_screen_spanish"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".PlayScreenItalianActivity"
-            android:label="@string/title_activity_play_screen_german"
+            android:label="@string/title_activity_play_screen_italian"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ResultsActivity" />
         <activity
