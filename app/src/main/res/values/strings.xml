@@ -13,10 +13,13 @@
     <string name="contact_us_roy">Roynuka Nuka: nukar1@student.op.ac.nz</string>
     <string name="contact_us_aisea">Aisea Tawake: tawaab1@student.op.ac.nz</string>
 
-    <!-- Strings used for fragments for navigation -->
+
+    <string name="title_activity_translation">Translation</string>
     <string name="speak">Speak</string>
     <string name="translate">Translate</string>
 
-    <!-- Strings used for fragments for navigation -->
+
+    <!--Lang code -->
+
 
 </resources>

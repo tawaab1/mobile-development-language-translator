@@ -11,8 +11,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.amorjk1.languagetranslator.R.id.txvQuestion
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
 import kotlinx.android.synthetic.main.activity_playscreen.*
+import kotlinx.android.synthetic.main.activity_playscreen.toolbar
+import kotlinx.android.synthetic.main.content_translation.*
 import kotlinx.android.synthetic.main.content_about_us.*
 import java.lang.reflect.Array.get
 import java.util.*
@@ -145,6 +146,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
         val speakBtn = findViewById<View1>(R.id.buttonSpeak)
         speakBtn.setOnClickListener{
+
             //val toSpeak2 = textView.text.toString()
             //val toSpeak = editText.text.toString()
             val toSpeak2 = txtQuestion.text.toString()
@@ -154,6 +156,7 @@ class PlayScreenActivity : AppCompatActivity() {
             else{
                 Toast.makeText(this,toSpeak2,Toast.LENGTH_LONG).show()
                 mTTs.speak(toSpeak2, TextToSpeech.QUEUE_FLUSH,null)
+
             }
         }
 
@@ -181,7 +184,7 @@ class PlayScreenActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_playquiz->{
-                    startActivity(Intent(this@PlayScreenActivity, PlayScreenActivity::class.java))
+                    startActivity(Intent(this@PlayScreenActivity, TranslationActivity::class.java))
                     finish()
                     true
                 }
