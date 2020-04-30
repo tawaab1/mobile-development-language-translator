@@ -1,3 +1,7 @@
+/*
+about us activity
+brief info about the developers of the app
+ */
 package com.amorjk1.languagetranslator
 
 import android.content.Intent

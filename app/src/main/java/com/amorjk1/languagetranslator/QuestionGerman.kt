@@ -1,5 +1,8 @@
 import com.amorjk1.languagetranslator.R
-
+/*
+Question class
+Creates questions, answers, choices, and images for quiz in arrays
+ */
 class QuestionGerman {
 
     private val nQuestions = arrayOf<String>("Danke.",

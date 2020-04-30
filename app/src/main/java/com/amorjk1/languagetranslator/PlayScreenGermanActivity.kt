@@ -1,3 +1,6 @@
+/*
+german activity quiz
+ */
 package com.amorjk1.languagetranslator
 
 import Question

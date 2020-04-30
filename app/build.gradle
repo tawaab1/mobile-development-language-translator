@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
 
 android {
     compileSdkVersion 28
@@ -34,7 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+}
+dokka {
+    outputFormat = 'markdown'
+    outputDirectory = "$buildDir/javadoc"
+    skipDeprecated = true
+    reportUndocumented = true
 }
 
 dependencies {

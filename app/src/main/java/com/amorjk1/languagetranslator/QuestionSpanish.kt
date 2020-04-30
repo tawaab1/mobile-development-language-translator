@@ -1,7 +1,10 @@
 import com.amorjk1.languagetranslator.R
 
 class QuestionSpanish {
-
+    /*
+    Question class
+    Creates questions, answers, choices, and images for quiz in arrays
+     */
     private val nQuestions = arrayOf<String>("Good morning is?",
         "How are you?",
         "My name is?",

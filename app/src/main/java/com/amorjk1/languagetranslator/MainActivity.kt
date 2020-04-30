@@ -25,26 +25,30 @@ class MainActivity : AppCompatActivity() {
          */
         bnv1.setOnNavigationItemSelectedListener(OnNavigationItemSelectedListener())
         bnv1.menu.getItem(1).isChecked = true
-        //speak button
-        //val speakBtn = findViewById<View>(R.id.buttonSpeak)
-        //speakBtn.setOnClickListener(YoutubeButtonOnClickListener())
-        //val editText = findViewById<View>(R.id.editText)
 
+        //Start/French button takes you to the French quiz
         startButton.setOnClickListener(View.OnClickListener {
             val intent = Intent(this@MainActivity, PlayScreenActivity::class.java)
             startActivity(intent)
         })
 
+        //german button takes you to german quiz
         btnGerman.setOnClickListener(View.OnClickListener {
             val intentGerman = Intent(this@MainActivity, PlayScreenGermanActivity::class.java)
             startActivity(intentGerman)
         })
 
+        /*
+        Button, spanish takes you to spanish quiz
+         */
         btnSpanish.setOnClickListener(View.OnClickListener {
             val intentSpanish = Intent(this@MainActivity, PlayScreenSpanishActivity::class.java)
             startActivity(intentSpanish)
         })
 
+        /*
+        button, takes you to Italian Quiz
+         */
         btnItalian.setOnClickListener(View.OnClickListener {
             val intentItalian = Intent(this@MainActivity, PlayScreenItalianActivity::class.java)
             startActivity(intentItalian)
@@ -72,6 +76,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /*
+    exit alert dialog on back pressed, when user presses back button
+    gives user option to to exit "yes" or stay "no"
+     */
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setMessage("Are You Sure You want To Exit")
