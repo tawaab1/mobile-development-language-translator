@@ -1,11 +1,12 @@
 import com.amorjk1.languagetranslator.R
 
-class Question {
-    private val nQuestions = arrayOf<String>("How do you say you're welcome?",
-    "Argent means what in English?",
-    "What does the picture show?",
-    "This is a young what?",
-    "How many chairs are there?");
+class QuestionItalian {
+
+    private val nQuestions = arrayOf<String>("Italian do you say you're welcome?",
+        "Argent means what in English?",
+        "What does the picture show?",
+        "This is a young what?",
+        "How many chairs are there?");
 
     private val nQuestionsGerman = arrayOf<String>("How do you say you're welcome?",
         "Argent means what in English?",
