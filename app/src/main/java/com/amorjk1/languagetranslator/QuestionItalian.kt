@@ -2,21 +2,21 @@ import com.amorjk1.languagetranslator.R
 
 class QuestionItalian {
 
-    private val nQuestions = arrayOf<String>("Italian do you say you're welcome?",
-        "Argent means what in English?",
-        "What does the picture show?",
-        "This is a young what?",
-        "How many chairs are there?");
+    private val nQuestions = arrayOf<String>("You say 'Buon compleanno' to someone on their",
+        "What does 'Buongiorno!' mean?",
+        "What does 'Arrivederci!' mean in Italian",
+        "When you ask someone 'Come si chiama?' what are you asking them?",
+        "What does 'Per favore' mean?");
 
-    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Vous êtes les bienvenus", "Bonjour", "Bicyclette", "La télé"),
-        arrayOf<String>("Money", "Car", "Laptop", "School"),
-        arrayOf<String>("Chaise", "Verde", "Lit", "Lady"),
-        arrayOf<String>("Senorita", "Mama", "Lady", "Dame"),
-        arrayOf<String>("Quatre", "beaucoup", "Tres", "Cuatro"))
+    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("First day of work", "Weekend", "Birthday", "Last day of school"),
+        arrayOf<String>("Good night", "Hello", "Im tired", "Where is the bathroom"),
+        arrayOf<String>("Goodbye", "Hello", "I want water", "No"),
+        arrayOf<String>("Their age", "Their name", "Where you're from", "How are they doing"),
+        arrayOf<String>("Excuse me", "How old are you", "My name is", "Please"))
 
-    private val nAnswers = arrayOf<String>("Vous êtes les bienvenu","Money","Lit","Dame","Quatre");
+    private val nAnswers = arrayOf<String>("Birthday","Hello","Goodbye","Their name","Please");
 
-    var images = intArrayOf(R.drawable.youre_welcome,R.drawable.dolares,R.drawable.cama,R.drawable.senorita,R.drawable.chairs)
+    var images = intArrayOf(R.drawable.birthday,R.drawable.hello,R.drawable.goodbye,R.drawable.theirname,R.drawable.please)
 
     fun getQuestion(a:Int):String {
         val question = nQuestions[a]

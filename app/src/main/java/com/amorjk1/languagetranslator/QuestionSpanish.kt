@@ -2,21 +2,21 @@ import com.amorjk1.languagetranslator.R
 
 class QuestionSpanish {
 
-    private val nQuestions = arrayOf<String>("Spanish do you say you're welcome?",
-        "Argent means what in English?",
-        "What does the picture show?",
-        "This is a young what?",
-        "How many chairs are there?");
+    private val nQuestions = arrayOf<String>("Good morning is?",
+        "How are you?",
+        "My name is?",
+        "How do you make toast?",
+        "Feliz navidad is?");
 
-    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Vous êtes les bienvenus", "Bonjour", "Bicyclette", "La télé"),
-        arrayOf<String>("Money", "Car", "Laptop", "School"),
-        arrayOf<String>("Chaise", "Verde", "Lit", "Lady"),
-        arrayOf<String>("Senorita", "Mama", "Lady", "Dame"),
-        arrayOf<String>("Quatre", "beaucoup", "Tres", "Cuatro"))
+    private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Buenos Dias", "Bueonas Noches", "Buenas tardes", "Hola"),
+        arrayOf<String>("Como esas", "Comas dias", "Comas como", "Coma est"),
+        arrayOf<String>("Mi llamo", "Me llamo", "My llamo", "My namo"),
+        arrayOf<String>("Salud", "Viva", "Vila", "Salut"),
+        arrayOf<String>("Easter", "Otago anniversary", "Christmas", "New year"))
 
-    private val nAnswers = arrayOf<String>("Vous êtes les bienvenu","Money","Lit","Dame","Quatre");
+    private val nAnswers = arrayOf<String>("Buenoas dias","Coma estas","Me llamo","Salud","Christmas");
 
-    var images = intArrayOf(R.drawable.youre_welcome,R.drawable.dolares,R.drawable.cama,R.drawable.senorita,R.drawable.chairs)
+    var images = intArrayOf(R.drawable.buenosdias,R.drawable.comoestas,R.drawable.mellamo,R.drawable.salud,R.drawable.christmas)
 
     fun getQuestion(a:Int):String {
         val question = nQuestions[a]
