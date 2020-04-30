@@ -29,9 +29,25 @@ class MainActivity : AppCompatActivity() {
         //val speakBtn = findViewById<View>(R.id.buttonSpeak)
         //speakBtn.setOnClickListener(YoutubeButtonOnClickListener())
         //val editText = findViewById<View>(R.id.editText)
+
         startButton.setOnClickListener(View.OnClickListener {
             val intent = Intent(this@MainActivity, PlayScreenActivity::class.java)
             startActivity(intent)
+        })
+
+        btnGerman.setOnClickListener(View.OnClickListener {
+            val intentGerman = Intent(this@MainActivity, PlayScreenGermanActivity::class.java)
+            startActivity(intentGerman)
+        })
+
+        btnSpanish.setOnClickListener(View.OnClickListener {
+            val intentSpanish = Intent(this@MainActivity, PlayScreenSpanishActivity::class.java)
+            startActivity(intentSpanish)
+        })
+
+        btnItalian.setOnClickListener(View.OnClickListener {
+            val intentItalian = Intent(this@MainActivity, PlayScreenItalianActivity::class.java)
+            startActivity(intentItalian)
         })
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

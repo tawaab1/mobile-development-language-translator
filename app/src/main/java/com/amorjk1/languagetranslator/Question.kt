@@ -7,15 +7,19 @@ class Question {
     "This is a young what?",
     "How many chairs are there?");
 
+
     private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Vous êtes les bienvenus", "Bonjour", "Bicyclette", "La télé"),
         arrayOf<String>("Money", "Car", "Laptop", "School"),
         arrayOf<String>("Chaise", "Verde", "Lit", "Lady"),
         arrayOf<String>("Senorita", "Mama", "Lady", "Dame"),
         arrayOf<String>("Quatre", "beaucoup", "Tres", "Cuatro"))
 
-    private val nAnswers = arrayOf<String>("Vous êtes les bienvenus","Money","Lit","Dame","Quatre");
+
+    private val nAnswers = arrayOf<String>("Vous êtes les bienvenu","Money","Lit","Dame","Quatre");
+
 
     var images = intArrayOf(R.drawable.youre_welcome,R.drawable.dolares,R.drawable.cama,R.drawable.senorita,R.drawable.chairs)
+
 
     fun getQuestion(a:Int):String {
         val question = nQuestions[a]
