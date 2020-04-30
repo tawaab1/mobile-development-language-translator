@@ -1,7 +1,7 @@
 import com.amorjk1.languagetranslator.R
 
 class Question {
-    private val nQuestions = arrayOf<String>("How do you say you're welcome?",
+    var nQuestions = arrayOf<String>("How do you say you're welcome?",
     "Argent means what in English?",
     "What does the picture show?",
     "This is a young what?",
