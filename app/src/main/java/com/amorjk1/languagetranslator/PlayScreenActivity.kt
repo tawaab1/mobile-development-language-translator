@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import kotlinx.android.synthetic.main.activity_playscreen.*
+import kotlinx.android.synthetic.main.activity_playscreen.toolbar
+import kotlinx.android.synthetic.main.content_translation.*
 import java.util.*
 
 
@@ -38,10 +40,10 @@ class PlayScreenActivity : AppCompatActivity() {
         speakBtn.setOnClickListener{
             val toSpeak = editText.text.toString()
             if (toSpeak == ""){
-                Toast.makeText(this,"Enter Text",Toast.LENGTH_LONG).show()
+                Toast.makeText(this,"Nothing entered",Toast.LENGTH_LONG).show()
             }
             else{
-                Toast.makeText(this,toSpeak,Toast.LENGTH_LONG).show()
+                Toast.makeText(this,toSpeak, Toast.LENGTH_LONG).show()
                 mTTs.speak(toSpeak, TextToSpeech.QUEUE_FLUSH,null)
             }
 
@@ -71,7 +73,7 @@ class PlayScreenActivity : AppCompatActivity() {
                  * navigates to the About Us activity
                  */
                 R.id.navigation_playquiz->{
-                    startActivity(Intent(this@PlayScreenActivity, PlayScreenActivity::class.java))
+                    startActivity(Intent(this@PlayScreenActivity, TranslationActivity::class.java))
                     finish()
                     true
                 }
