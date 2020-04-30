@@ -2,22 +2,19 @@ package com.amorjk1.languagetranslator
 
 import Question
 import android.content.Intent
+import android.media.session.MediaSession
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.util.Log
 import android.view.MenuItem
-import android.widget.*
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.amorjk1.languagetranslator.R.id.txvQuestion
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_playscreen.*
-import kotlinx.android.synthetic.main.activity_playscreen.toolbar
-import kotlinx.android.synthetic.main.content_translation.*
-import kotlinx.android.synthetic.main.content_about_us.*
-import java.lang.reflect.Array.get
 import java.util.*
-import kotlin.collections.ArrayList
 import android.view.View as View1
 
 
@@ -35,6 +32,7 @@ class PlayScreenActivity : AppCompatActivity() {
     private lateinit var nButtonChoice2: Button
     private lateinit var nButtonChoice3: Button
     private lateinit var nButtonChoice4: Button
+
 
     private var nAnswer:String? = ""
     private var nScore:Int = 0
@@ -57,8 +55,18 @@ class PlayScreenActivity : AppCompatActivity() {
         nButtonChoice2 = findViewById(R.id.button2)
         nButtonChoice3 = findViewById(R.id.button3)
         nButtonChoice4 = findViewById(R.id.button4)
+        var question = 0;
 
         updateQuestion()
+
+
+        fun openDialog() {
+            AlertDialog.Builder(this)
+                .setMessage("Your final score is " + nScore + " out of " + nQuestionNumber)
+                .setCancelable(false)
+                .setPositiveButton("Quit", { dialog, id-> this@PlayScreenActivity.finish(); })
+                .show()
+        }
 
         nButtonChoice1.setOnClickListener(View1.OnClickListener {
 
@@ -68,13 +76,37 @@ class PlayScreenActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                    {
+                        updateQuestion();
+                    }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -86,13 +118,37 @@ class PlayScreenActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -104,13 +160,37 @@ class PlayScreenActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -121,16 +201,42 @@ class PlayScreenActivity : AppCompatActivity() {
                 //correct answer
                 nScore += 1;
                 updateScore(nScore);
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
             else
             {
-                //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
+
+
+
         /**
          * calling the class OnNavigationItemSelectedListener() to the onCreate() method
          */
@@ -210,6 +316,11 @@ class PlayScreenActivity : AppCompatActivity() {
             .show()
     }
 
+    private fun updateScore(point:Int) {
+        scoreView.setText("Score:" + nScore)
+    }
+
+
     private fun updateQuestion() {
         imageView.setImageResource(questions.images[nQuestionNumber])
         txtQuestion.setText(questions.getQuestion(nQuestionNumber))
@@ -218,13 +329,14 @@ class PlayScreenActivity : AppCompatActivity() {
         nButtonChoice3.setText(questions.getChoice3(nQuestionNumber))
         nButtonChoice4.setText(questions.getChoice4(nQuestionNumber))
 
+
+        var intent = Intent(this, MainActivity::class.java)
+
         nAnswer = questions.getCorrectAnswer(nQuestionNumber)
         nQuestionNumber++
 
     }
 
-    private fun updateScore(point:Int) {
-        scoreView.setText("Score:" + nScore)
-    }
+
 
 }
