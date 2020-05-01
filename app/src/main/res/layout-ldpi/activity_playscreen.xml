@@ -23,14 +23,13 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
 
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView
         android:id="@+id/imgView"
 
-        android:layout_width="461dp"
-        android:layout_height="170dp"
+        android:layout_width="237dp"
+        android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,57 +38,51 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:srcCompat="@drawable/ic_android" />
 
+
     <TextView
         android:id="@+id/txvQuestion"
 
-        android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="209dp"
+        android:layout_height="44dp"
         android:text="Questions Dummy Data"
-        android:textAlignment="center"
 
+        android:textAlignment="center"
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/button1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.607"
+        tools:layout_editor_absoluteX="56dp" />
 
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/bnv2"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.792" />
+        app:layout_constraintVertical_bias="0.687" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/bnv2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.708" />
-
+        app:layout_constraintVertical_bias="0.578" />
 
     <Button
         android:id="@+id/buttonSpeak"
-        android:layout_width="405dp"
-        android:layout_height="45dp"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="88dp"
@@ -97,40 +90,39 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
 
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/bnv2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.466" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="410dp"
-        android:layout_height="45dp"
+        android:layout_width="133dp"
+        android:layout_height="43dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="@+id/bnv2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.523" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
         android:background="@color/colorPrimary"
         app:itemIconTint="@color/bnv_tab_item_foreground"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -148,10 +140,10 @@
         android:textColor="@color/mainText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-        app:layout_constraintVertical_bias="0.562" />
+        app:layout_constraintVertical_bias="0.39" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
