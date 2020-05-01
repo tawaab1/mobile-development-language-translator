@@ -31,7 +31,7 @@
         app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnv1"
+        android:id="@+id/bnv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
