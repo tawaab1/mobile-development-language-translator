@@ -80,7 +80,9 @@ This feauture switches your devices display settings to 'dark mode' and can swit
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/darkmode.png" width="300" height="500" />
 
+## Problems Viewing a Question?
 
+If there is any problems viewing a question on any of the Quiz screens, you can press the "Speak" button to read out the question on to a toast.
 
 
 
