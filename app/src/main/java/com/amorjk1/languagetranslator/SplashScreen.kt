@@ -28,5 +28,8 @@ class SplashScreen : AppCompatActivity() {
          */
         imvIcons.alpha = 0f
         imvIcons.animate().setDuration(3000).alpha(1f);
+
+        imvText.alpha = 0f
+        imvText.animate().setDuration(3000).alpha(1f);
     }
 }

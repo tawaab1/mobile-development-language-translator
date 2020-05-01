@@ -5,8 +5,8 @@ Creates questions, answers, choices, and images for quiz in arrays
  */
 class QuestionGerman {
 
-    private val nQuestions = arrayOf<String>("Danke.",
-        "Yes",
+    var nQuestions = arrayOf<String>("Danke.",
+        "Ja",
         "What does the phrase “Guten morgen” translate to?",
         "What does 'Es tut mir leid' mean?",
         "Can you tell what 'Vielen Dank' means in English?");
@@ -18,7 +18,7 @@ class QuestionGerman {
         arrayOf<String>("Of course", "Nothing, thanks", "Can you translate that", "I'm sorry"),
         arrayOf<String>("Thank you very much", "Im going to the park", "I'm doing well", "I reserved a table"))
 
-    private val nAnswers = arrayOf<String>("Thank You","Yes","Good morning","Im sorry","Thank you very much");
+    private val nAnswers = arrayOf<String>("Thank You","Yes","Good morning","I'm sorry","Thank you very much");
 
     var images = intArrayOf(R.drawable.thank_you,R.drawable.yes,R.drawable.good_morning,R.drawable.im_sorry,R.drawable.verymuch)
 

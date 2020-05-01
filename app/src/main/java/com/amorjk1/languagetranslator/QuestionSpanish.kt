@@ -1,23 +1,19 @@
 import com.amorjk1.languagetranslator.R
 
 class QuestionSpanish {
-    /*
-    Question class
-    Creates questions, answers, choices, and images for quiz in arrays
-     */
-    private val nQuestions = arrayOf<String>("Good morning is?",
+    var nQuestions = arrayOf<String>("Good morning is?",
         "How are you?",
         "My name is?",
         "How do you make toast?",
         "Feliz navidad is?");
 
     private val nChoices = arrayOf<Array<String>>(arrayOf<String>("Buenos Dias", "Bueonas Noches", "Buenas tardes", "Hola"),
-        arrayOf<String>("Como esas", "Comas dias", "Comas como", "Coma est"),
+        arrayOf<String>("Como estas", "Comas dias", "Comas como", "Coma est"),
         arrayOf<String>("Mi llamo", "Me llamo", "My llamo", "My namo"),
         arrayOf<String>("Salud", "Viva", "Vila", "Salut"),
         arrayOf<String>("Easter", "Otago anniversary", "Christmas", "New year"))
 
-    private val nAnswers = arrayOf<String>("Buenoas dias","Coma estas","Me llamo","Salud","Christmas");
+    private val nAnswers = arrayOf<String>("Buenos Dias","Como estas","Me llamo","Salud","Christmas");
 
     var images = intArrayOf(R.drawable.buenosdias,R.drawable.comoestas,R.drawable.mellamo,R.drawable.salud,R.drawable.christmas)
 

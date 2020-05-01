@@ -51,7 +51,7 @@ class PlayScreenActivity : AppCompatActivity() {
         nButtonChoice2 = findViewById(R.id.button2)
         nButtonChoice3 = findViewById(R.id.button3)
         nButtonChoice4 = findViewById(R.id.button4)
-        var question = 0;
+
 
         updateQuestion()
 

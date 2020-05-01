@@ -5,7 +5,7 @@ Creates questions, answers, choices, and images for quiz in arrays
  */
 class QuestionItalian {
 
-    private val nQuestions = arrayOf<String>("You say 'Buon compleanno' to someone on their",
+    var nQuestions = arrayOf<String>("You say 'Buon compleanno' to someone on their",
         "What does 'Buongiorno!' mean?",
         "What does 'Arrivederci!' mean in Italian",
         "When you ask someone 'Come si chiama?' what are you asking them?",

@@ -64,6 +64,14 @@ class PlayScreenItalianActivity : AppCompatActivity() {
 
         updateQuestion()
 
+        fun openDialog() {
+            AlertDialog.Builder(this)
+                .setMessage("Your final score is " + nScore + " out of " + nQuestionNumber)
+                .setCancelable(false)
+                .setPositiveButton("Quit", { dialog, id-> this@PlayScreenItalianActivity.finish(); })
+                .show()
+        }
+
         nButtonChoice1.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice1.getText() == nAnswer)
@@ -72,13 +80,37 @@ class PlayScreenItalianActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenItalianActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenItalianActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -90,13 +122,37 @@ class PlayScreenItalianActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenItalianActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenItalianActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -108,13 +164,37 @@ class PlayScreenItalianActivity : AppCompatActivity() {
                 nScore += 1;
                 updateScore(nScore);
                 Toast.makeText(this@PlayScreenItalianActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
             }
             else
             {
                 //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenItalianActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
 
@@ -125,14 +205,37 @@ class PlayScreenItalianActivity : AppCompatActivity() {
                 //correct answer
                 nScore += 1;
                 updateScore(nScore);
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenItalianActivity, "correct", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
             else
             {
-                //incorrect
+                if (nQuestionNumber == questions.nQuestions.size){
+                    var i = Intent(this@PlayScreenItalianActivity, ResultsActivity::class.java);
+                    var bundle = Bundle();
+                    bundle.putInt("final score", nScore);
+                    i.putExtras(bundle);
+                    openDialog()
+                    //this@PlayScreenActivity.finish();
+                }
+
+                else
+                {
+                    updateQuestion();
+                }
                 Toast.makeText(this@PlayScreenItalianActivity, "wrong", Toast.LENGTH_SHORT).show()
-                updateQuestion()
             }
         })
         /**
