@@ -13,6 +13,9 @@ The main menu of the application, from here you will see 4 buttons, a bottom nav
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/mainActivity.png" width="300" height="500"/>
 
 Exit dialog from Menu
+
+
+
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenexit.png" height="500" width="300" />
 
 ## BottomNavigationActivity
@@ -45,19 +48,29 @@ Each one of the activities listed below does the same thing. These activites are
 - PlayScreenSpanishActivity
 
 Play screen 
+
+
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenplay.png" width="300" height="500"/>
 
 Play screen correct
+
+
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreencorrect.png" width="300" height="500"/>
 
 Play screen wrong
+
+
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenwrong.png" width="300" height="500"/>
 
 Play screen final score
+
+
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenfinalscore.png" width="300" height="500"/>
 
+
 Play screen go back
-<img src="https://github.com/tawaab1/mobile-development-language-translator/tree/readmefile-roy/images" height="500" width="300"/>
+
+<img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreengoback.png" width="300" height="500" />
 
 
 
