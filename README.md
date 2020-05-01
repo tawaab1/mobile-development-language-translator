@@ -24,6 +24,7 @@ An activity that allows the user to navigate through 4 different activities/scre
 - AboutUsActivity
 - TranslationActivity
 - Home/MainActivity
+The navigation is found at the bottom with icons.
 
 ## ContactUsActivity
 The activity is linked via the BottomNavigationActivity basically telling the user our contact information
@@ -72,6 +73,12 @@ Play screen go back. If the user wants to go back a dialog box appears with an o
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreengoback.png" width="300" height="500" />
 
 ## Dark mode feature
+Configure the dark mode feature by 
+- Settings > display > dark mode
+
+This feauture switches your devices display settings to 'dark mode' and can switched back by following the previous steps
+
+<img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/darkmode.png" width="300" height="500" />
 
 
 
