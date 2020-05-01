@@ -1,7 +1,6 @@
 import com.amorjk1.languagetranslator.R
 
 class QuestionSpanish {
-
     var nQuestions = arrayOf<String>("Good morning is?",
         "How are you?",
         "My name is?",

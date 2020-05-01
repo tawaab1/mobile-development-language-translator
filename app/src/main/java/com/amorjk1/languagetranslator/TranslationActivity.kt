@@ -1,3 +1,9 @@
+/*
+translation activity
+translates text input to different languages
+text to speeech feature as well
+option to select different language to translate and speak
+ */
 package com.amorjk1.languagetranslator
 
 import android.content.Intent

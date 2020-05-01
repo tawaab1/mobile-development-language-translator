@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'org.jetbrains.dokka'
 
 android {
     compileSdkVersion 28
@@ -34,7 +35,12 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
+}
+dokka {
+    outputFormat = 'markdown'
+    outputDirectory = "javadoc"
+    skipDeprecated = true
+    reportUndocumented = true
 }
 
 dependencies {
@@ -51,6 +57,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
-
 
 }

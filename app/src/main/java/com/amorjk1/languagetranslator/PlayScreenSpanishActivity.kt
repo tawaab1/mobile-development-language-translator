@@ -1,3 +1,6 @@
+/*
+spanish quiz
+ */
 package com.amorjk1.languagetranslator
 
 import Question
@@ -24,12 +27,8 @@ import android.view.View as View1
 
 class PlayScreenSpanishActivity : AppCompatActivity() {
 
-//    private var txtScore: TextView? = null
-//    private var txtQuestionCount: TextView? = null
-//    private var txtCounter: TextView? = null
     private val questions = QuestionSpanish()
     private lateinit  var imageView:ImageView
-    //mQuestionView = findViewById(R.id.question) as TextView
     private lateinit var scoreView: TextView
     private lateinit var txtQuestion: TextView
     private lateinit var nButtonChoice1: Button

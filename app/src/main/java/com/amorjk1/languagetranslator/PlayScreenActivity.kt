@@ -1,3 +1,6 @@
+/*
+french activity quiz
+ */
 package com.amorjk1.languagetranslator
 
 import Question
@@ -20,19 +23,14 @@ import android.view.View as View1
 
 class PlayScreenActivity : AppCompatActivity() {
 
-//    private var txtScore: TextView? = null
-//    private var txtQuestionCount: TextView? = null
-//    private var txtCounter: TextView? = null
     private val questions = Question()
     private lateinit  var imageView:ImageView
-    //mQuestionView = findViewById(R.id.question) as TextView
     private lateinit var scoreView: TextView
     private lateinit var txtQuestion: TextView
     private lateinit var nButtonChoice1: Button
     private lateinit var nButtonChoice2: Button
     private lateinit var nButtonChoice3: Button
     private lateinit var nButtonChoice4: Button
-
 
     private var nAnswer:String? = ""
     private var nScore:Int = 0
@@ -48,9 +46,7 @@ class PlayScreenActivity : AppCompatActivity() {
 
         imageView = findViewById(R.id.imgView)
         scoreView = findViewById(R.id.txvScore)
-        //nScore = findViewById(R.id.txvScore)
         txtQuestion = findViewById(R.id.txvQuestion)
-       // txtQuestion = textView.findViewById(R.id.txvQuestion)
         nButtonChoice1 = findViewById(R.id.button1)
         nButtonChoice2 = findViewById(R.id.button2)
         nButtonChoice3 = findViewById(R.id.button3)
@@ -58,7 +54,6 @@ class PlayScreenActivity : AppCompatActivity() {
 
 
         updateQuestion()
-
 
         fun openDialog() {
             AlertDialog.Builder(this)
@@ -68,8 +63,10 @@ class PlayScreenActivity : AppCompatActivity() {
                 .show()
         }
 
+        /*
+        checks button choice if correct or incorrect
+         */
         nButtonChoice1.setOnClickListener(View1.OnClickListener {
-
             if (nButtonChoice1.getText() == nAnswer)
             {
                 //correct answer
@@ -84,7 +81,6 @@ class PlayScreenActivity : AppCompatActivity() {
                     openDialog()
                     //this@PlayScreenActivity.finish();
                 }
-
                 else
                     {
                         updateQuestion();
@@ -110,6 +106,9 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
+                    /*
+            checks button choice if correct or incorrect
+             */
         nButtonChoice2.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice2.getText() == nAnswer)
@@ -152,6 +151,9 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
+        /*
+        checks button choice if correct or incorrect
+         */
         nButtonChoice3.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice3.getText() == nAnswer)
@@ -194,6 +196,10 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
+
+        /*
+        checks button choice if correct or incorrect
+         */
         nButtonChoice4.setOnClickListener(View1.OnClickListener {
 
             if (nButtonChoice4.getText() == nAnswer)
@@ -235,8 +241,6 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
-
-
         /**
          * calling the class OnNavigationItemSelectedListener() to the onCreate() method
          */
@@ -250,11 +254,12 @@ class PlayScreenActivity : AppCompatActivity() {
             }
         })
 
+        /*
+        text to speech button, reads the question in textview
+         */
         val speakBtn = findViewById<View1>(R.id.buttonSpeak)
         speakBtn.setOnClickListener{
 
-            //val toSpeak2 = textView.text.toString()
-            //val toSpeak = editText.text.toString()
             val toSpeak2 = txtQuestion.text.toString()
             if (toSpeak2 == ""){
                 Toast.makeText(this,"Enter Text",Toast.LENGTH_LONG).show()
@@ -307,6 +312,9 @@ class PlayScreenActivity : AppCompatActivity() {
         }
     }
 
+    /*
+    asks user if they want to go back to main menu
+     */
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setMessage("Are You Sure You want To Go Back")
@@ -316,11 +324,16 @@ class PlayScreenActivity : AppCompatActivity() {
             .show()
     }
 
+    /*
+    updates score
+     */
     private fun updateScore(point:Int) {
         scoreView.setText("Score:" + nScore)
     }
 
-
+    /*
+    updates new question after old question
+     */
     private fun updateQuestion() {
         imageView.setImageResource(questions.images[nQuestionNumber])
         txtQuestion.setText(questions.getQuestion(nQuestionNumber))
@@ -328,7 +341,6 @@ class PlayScreenActivity : AppCompatActivity() {
         nButtonChoice2.setText(questions.getChoice2(nQuestionNumber))
         nButtonChoice3.setText(questions.getChoice3(nQuestionNumber))
         nButtonChoice4.setText(questions.getChoice4(nQuestionNumber))
-
 
         var intent = Intent(this, MainActivity::class.java)
 

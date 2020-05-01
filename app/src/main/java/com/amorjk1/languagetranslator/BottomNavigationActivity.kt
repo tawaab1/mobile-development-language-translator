@@ -1,3 +1,7 @@
+/*
+bottom navigation
+navigates to different activities in the app
+ */
 package com.amorjk1.languagetranslator
 
 import android.content.Intent

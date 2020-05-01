@@ -1,4 +1,8 @@
 import com.amorjk1.languagetranslator.R
+/*
+Question class
+Creates questions, answers, choices, and images for quiz in arrays
+ */
 
 class Question {
     var nQuestions = arrayOf<String>("How do you say you're welcome?",
