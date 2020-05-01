@@ -17,9 +17,4 @@
         </menu>
     </item>
 
-    <item
-        android:id="@+id/exit"
-        android:icon="@drawable/ic_exit_to_app_black_24dp"
-        app:showAsAction="always"
-        android:title="Exit" />
 </menu>
