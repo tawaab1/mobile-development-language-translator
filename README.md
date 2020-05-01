@@ -5,6 +5,8 @@
 ## Splash Screen
 The launcher activity, which is the first screen you see when you open the application displaying a simple logo animation. After a set time you go to the MainActivity. This is the main menu of the application
 
+
+
 ## MainActivity
 The main menu of the application, from here you will see 4 buttons, a bottom navigation,and a navigation toolbar at the top. The 4 buttons take you to 4 different quizzes with each language having different sets of questions. The bottom navigation takes you to 4 different screens such as Home, Translate, Contact Us, and About us. 
 
