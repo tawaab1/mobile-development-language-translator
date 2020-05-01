@@ -84,6 +84,14 @@ This feauture switches your devices display settings to 'dark mode' and can swit
 
 If there is any problems viewing a question on any of the Quiz screens, you can press the "Speak" button to read out the question on to a toast.
 
+## Localization
+
+If you wish to change the language used in the app just go to:
+
+Device Settings> General Management and Input > Language > Add Language > Set the prefered language as default
+
+This will also change the the language used on the app.
+
 
 
 
