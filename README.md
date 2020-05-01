@@ -8,12 +8,12 @@ The launcher activity, which is the first screen you see when you open the appli
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/splashscreen.png" width="300" height="500" />
 
 ## MainActivity
-The main menu of the application, from here you will see 4 buttons, a bottom navigation,and a navigation toolbar at the top. The 4 buttons take you to 4 different quizzes with each language having different sets of questions. The bottom navigation takes you to 4 different screens such as Home, Translate, Contact Us, and About us. 
+The main menu of the application, from here you will see 4 image buttons, a bottom navigation,and a navigation toolbar at the top. The 4 image buttons take you to 4 different quizzes with each language having different sets of questions. The bottom navigation takes you to 4 different screens such as Home, Translate, Contact Us, and About us. 
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/mainActivity.png" width="300" height="500"/>
 
 Exit dialog from Menu
-
+If the user presses back on their device a dialog appears and gives you the option to exit the app or not
 
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenexit.png" height="500" width="300" />
@@ -52,25 +52,29 @@ Play screen
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenplay.png" width="300" height="500"/>
 
-Play screen correct
+Play screen correct. When the user answers the question correctly a toast message displays
 
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreencorrect.png" width="300" height="500"/>
 
-Play screen wrong
-
+Play screen wrong. When the user answers the question incorrectly a toast message displays
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenwrong.png" width="300" height="500"/>
 
-Play screen final score
+Play screen final score. Displays the user final score at the end of the quiz with a dialog box
 
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreenfinalscore.png" width="300" height="500"/>
 
 
-Play screen go back
+Play screen go back. If the user wants to go back a dialog box appears with an option to return to main menu or stay on the quiz
 
 <img src="https://github.com/tawaab1/mobile-development-language-translator/blob/readmefile-roy/images/playscreengoback.png" width="300" height="500" />
+
+## Dark mode feature
+
+
+
 
 
 
